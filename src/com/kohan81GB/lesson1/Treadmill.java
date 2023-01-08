@@ -1,6 +1,6 @@
 package com.kohan81GB.lesson1;
 
-public class Treadmill implements Competition{
+public class Treadmill implements Barriers {
 
     private int distance;
 

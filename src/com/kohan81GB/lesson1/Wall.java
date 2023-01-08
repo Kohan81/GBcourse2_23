@@ -1,6 +1,6 @@
 package com.kohan81GB.lesson1;
 
-public class Wall implements Competition{
+public class Wall implements Barriers {
 
     private int hight;
 

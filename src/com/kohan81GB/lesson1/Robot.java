@@ -12,13 +12,16 @@ public class Robot implements Member {
 
     private int canToJump = 1;
 
+    boolean admittance = true;
+
     @Override
     public void toRun(int distance) {
         System.out.println("I'm a robot, and I started to run");
         if(distance > canToRun){
             System.out.println("I can't run so long");
+            admittance = false;
         } else {
-            System.out.println("I am a " + name + "did it!!! I have run " + distance );
+            System.out.println("I am a " + name + " and I did it!!! I have run " + distance );
         }
     }
 
@@ -27,8 +30,14 @@ public class Robot implements Member {
         System.out.println("I'm a robot, and I started to jump");
         if(hight > canToJump){
             System.out.println("I can't jump so hight");
+            admittance = false;
         } else {
-            System.out.println("I am a " + name + "did it!!! I have jump " + hight );
+            System.out.println("I am a " + name + " and I did it!!! I have jump " + hight );
         }
+    }
+
+    @Override
+    public boolean admittance() {
+        return admittance;
     }
 }
