@@ -65,21 +65,4 @@ public class ThreadHomework {
         System.out.println("Two thread time: " + (System.currentTimeMillis() -
                 startTime) + " ms.");
     }
-
-    public static void splitAndMergeExample(int size, float[] arrey) {
-//        int[] initialArray = {1, 2, 3, 4, 5, 6};
-//        System.out.println(Arrays.toString(initialArray));
-        float[] leftHalf = new float[size/2];
-        float[] rightHalf = new float[size/2];
-        System.arraycopy(arrey, 0, leftHalf, 0, leftHalf.length);
-        System.arraycopy(arrey, size/2 + 1, rightHalf, 0, rightHalf.length);
-//        System.out.println(Arrays.toString(leftHalf));
-//        System.out.println(Arrays.toString(rightHalf));
-
-        float[] mergedArray = new float[size];
-        System.arraycopy(leftHalf, 0, mergedArray, 0, leftHalf.length);
-        System.arraycopy(rightHalf, 0, mergedArray, leftHalf.length +1, rightHalf.length    );
-        System.out.println(Arrays.toString(mergedArray));
-    }
-
 }
